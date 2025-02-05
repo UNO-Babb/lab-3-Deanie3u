@@ -13,7 +13,7 @@ def main():
   while playAgain == "Y":
     #Create a loop that continues as long as the user wants to play.
     #User can play as many games as they wish.
-    computer = random.choice( ["R", "P", "S"] )
+    computer = random.choice( ["R", "P", "S", "R"] )
     player = input("Pick your weapon (R, P, S): ")
     #Randomly choose the computer between 'R', 'P', or 'S'
     #Prompt the user for their RPS selection
@@ -37,30 +37,30 @@ def main():
     if player == "R" and computer == "R":
       print ("Tie")
       ties = ties + 1
-    if player == "R" and computer == "P":
+    elif player == "R" and computer == "P":
       print ("Computer wins.")
       losses = losses + 1
-    if player == "R" and computer == "S":
+    elif player == "R" and computer == "S":
       print("You win!")
       wins = wins + 1
 
     if player == "P" and computer == "S":
       print ("Computer wins.")
       losses = losses + 1
-    if player == "P" and computer == "P":
+    elif player == "P" and computer == "P":
       print ("Tie")
       ties = ties + 1
-    if player == "P" and computer == "R":
+    elif player == "P" and computer == "R":
       print("You win!")
       wins = wins + 1
 
     if player == "S" and computer == "R":
       print ("Computer wins.")
       losses = losses + 1
-    if player == "S" and computer == "P":
+    elif player == "S" and computer == "P":
       print("You win!")
       wins = wins + 1
-    if player == "S" and computer == "S":
+    elif player == "S" and computer == "S":
       print ("Tie")
       ties = ties + 1
 
